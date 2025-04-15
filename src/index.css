@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+/* Carousel arrows */
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFE; 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #262626;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: #f8bf18;
+  color: #ffffff;
+}
+
+.arrow.prev {
+  left: -20px;
+}
+
+.arrow.next {
+  right: -20px;
+}
