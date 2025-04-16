@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Element } from 'react-scroll'
 import Navbar from './components/NavBar'
 import HeroSection from './components/HeroSection'
 import CarouselSection from './components/CarouselSection'
@@ -14,16 +14,16 @@ function App() {
     <>
       <Navbar />
       <div className="pt-20">
-        <section id="home"><HeroSection /></section>
-        <section id="about"><AboutUs /></section>
-        <section id="services"><CarouselSection /></section>
-        <section id="how-it-works"><HowItWorks /></section>
-        {/* <section id="clients"><TestimonialCarousel /></section> */}
-        <section id="clients"><ClientsSection /></section>
-        <section id="contact">
+        <Element name="home"><HeroSection /></Element>
+        <Element name="about"><AboutUs /></Element>
+        <Element name="services"><CarouselSection /></Element>
+        <Element name="how-it-works"><HowItWorks /></Element>
+        {/* <Element name="clients"><TestimonialCarousel /></Element> */}
+        <Element name="clients"><ClientsSection /></Element>
+        <Element name="contact">
           <ContactUs />
           <Footer />
-        </section>
+        </Element>
       </div>
     </>
   )
