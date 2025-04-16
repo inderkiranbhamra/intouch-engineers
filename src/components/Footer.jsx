@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Contact */}
         <div>
           <h3 className="font-bold text-xl mb-2" style={{ color: "#f8bf18" }}>Contact Us</h3>
-          <p className="text-lg">+91 9814944610</p>
+          <a href="tel:+919814944610"><p className="text-lg">+91 9814944610</p></a>
           <p className="text-lg">intouchengineers@yahoo.com</p>
           <p className="text-lg mt-4">
             <span className="font-semibold" style={{ color: "#f8bf18" }}>Address:</span><br />
