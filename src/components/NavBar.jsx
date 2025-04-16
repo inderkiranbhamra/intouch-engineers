@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { Drawer, IconButton } from "@mui/material";
+import { Drawer, IconButton, Button } from "@mui/material";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#FFFFFE] shadow-md mb-20 fixed top-0 left-0 w-full z-1000 ">
+    <nav className="bg-[#FFFFFE] shadow-md mb-20 w-full">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         
         {/* Logo */}
@@ -26,7 +26,7 @@ const Navbar = () => {
           </a>
         </div>
 
-          {/* Desktop Menu */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-black text-xl">
           {["Home", "About", "Services", "Contact"].map((item, index) => (
             <Link 
@@ -34,15 +34,17 @@ const Navbar = () => {
               to={item.toLowerCase().replace(/ /g, "-")}
               smooth={true}
               duration={500}
-              offset={-80}  // navbar height offset
+              offset={-80}
               className="cursor-pointer hover:text-[#f8bf18]"
             >
               {item}
             </Link>
           ))}
-          <button className="bg-[#1656a0] hover:bg-[#114683] text-xl text-white px-4 py-2 rounded-xl cursor-pointer">
-            Get Started
-          </button>
+          <a href="tel:+919814944610">
+            <button className="bg-[#1656a0] hover:bg-[#114683] text-xl text-white px-4 py-2 rounded-xl cursor-pointer">
+              Get Started
+            </button>
+          </a>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -61,38 +63,38 @@ const Navbar = () => {
               </IconButton>
             </div>
             <div className="flex flex-col gap-6 p-6 w-64">
-            {["Home", "About", "Services", "Contact"].map((item, index) => (
-              <Link
-                key={index}
-                to={item.toLowerCase().replace(/ /g, "-")}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                onClick={toggleDrawer}
-                className="cursor-pointer text-gray-800 hover:text-green-500"
-              >
-                {item}
-              </Link>
-            ))}
-          </div>
-            <a href="tel:+919814944610">
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "#f8bf18",
-                    color: "#262626",
-                    "&:hover": {
-                      backgroundColor: "#262626",
-                      color: "#f8bf18",
-                    },
-                    textTransform: "none",
-                    fontSize: "14px",
-                    mt: 1,
-                  }}
+              {["Home", "About", "Services", "Contact"].map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.toLowerCase().replace(/ /g, "-")}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  onClick={toggleDrawer}
+                  className="cursor-pointer text-gray-800 hover:text-green-500"
                 >
-                  Get Started
-                </Button>
-              </a>
+                  {item}
+                </Link>
+              ))}
+            </div>
+            <a href="tel:+919814944610">
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#f8bf18",
+                  color: "#262626",
+                  "&:hover": {
+                    backgroundColor: "#262626",
+                    color: "#f8bf18",
+                  },
+                  textTransform: "none",
+                  fontSize: "14px",
+                  mt: 1,
+                }}
+              >
+                Get Started
+              </Button>
+            </a>
           </div>
         </Drawer>
       </div>
