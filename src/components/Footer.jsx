@@ -10,14 +10,23 @@ const Footer = () => {
         {/* Contact */}
         <div>
           <h3 className="font-bold text-xl mb-2" style={{ color: "#f8bf18" }}>Contact Us</h3>
-          <a href="tel:+919814944610"><p className="text-lg">+91 9814944610</p></a>
-          <p className="text-lg">intouchengineers@yahoo.com</p>
-          <p className="text-lg mt-4">
+          <a href="tel:+919814944610" className="block text-lg hover:underline hover:text-[#f8bf18] transition-colors">
+            +91 9814944610
+          </a>
+          <a href="mailto:intouchengineers@yahoo.com" className="block text-lg hover:underline hover:text-[#f8bf18] transition-colors">
+            intouchengineers@yahoo.com
+          </a>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Intouch+Engineers%2C+B-XXX-785+Sherpur+Bypass%2C+Grand+Trunk+Rd%2C+opposite+Meera+%26+Company%2C+Ludhiana%2C+Punjab+141010"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-lg mt-4 hover:underline hover:text-[#f8bf18] transition-colors"
+          >
             <span className="font-semibold" style={{ color: "#f8bf18" }}>Address:</span><br />
             B-XXX-785 Sherpur Bypass,<br />
             Grand Trunk Rd, opposite Meera & Company,<br />
             Ludhiana, Punjab 141010
-          </p>
+          </a>
         </div>
 
         {/* Quick Links */}
