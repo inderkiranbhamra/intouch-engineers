@@ -98,7 +98,7 @@ const ContactUs = () => {
           </a>
           {/* Address */}
           <a
-            href="https://www.google.com/maps/search/?api=1&query=B-XXX-785+Sherpur+Bypass,+Grand+Trunk+Rd,+opposite+Meera+%26+Company,+Ludhiana,+Punjab+141010"
+            href="https://www.google.com/maps/search/?api=1&query=Intouch+Engineers%2C+B-XXX-785+Sherpur+Bypass%2C+Grand+Trunk+Rd%2C+opposite+Meera+%26+Company%2C+Ludhiana%2C+Punjab+141010"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-xl gap-4 hover:underline"
