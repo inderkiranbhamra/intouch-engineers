@@ -23,7 +23,7 @@ const Footer = () => {
             className="block text-lg mt-4 hover:underline hover:text-[#f8bf18] transition-colors"
           >
             <span className="font-semibold" style={{ color: "#f8bf18" }}>Address:</span><br />
-            B-XXX-785 Sherpur Bypass,<br />
+            Intouch Engineers, B-XXX-785 Sherpur Bypass,<br />
             Grand Trunk Rd, opposite Meera & Company,<br />
             Ludhiana, Punjab 141010
           </a>
