@@ -6,7 +6,7 @@ import AboutUs from './components/AboutUs'
 import Footer from './components/Footer'
 // import TestimonialCarousel from './components/Testimonials'
 import HowItWorks from './components/HowItWorks'
-import ClientsSection from './components/ClientsSection'
+// import ClientsSection from './components/ClientsSection'
 import ContactUs from './components/ContactUs'
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Element name="services"><CarouselSection /></Element>
         <Element name="how-it-works"><HowItWorks /></Element>
         {/* <Element name="clients"><TestimonialCarousel /></Element> */}
-        <Element name="clients"><ClientsSection /></Element>
+{/*         <Element name="clients"><ClientsSection /></Element> */}
         <Element name="contact">
           <ContactUs />
           <Footer />
