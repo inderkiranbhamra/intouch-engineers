@@ -2,16 +2,16 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 
 const clientLogos = [
-  "/bank.png",
-  "/bank.png",
-  "/bank.png",
-  "/bank.png",
-  "/bank.png",
-  "/bank.png",
-  "/bank.png",
-  "/bank.png",
-  "/bank.png",
-  "/bank.png",
+  "/pepsi_logo.png",
+  "/pepsi_logo.png",
+  "/pepsi_logo.png",
+  "/pepsi_logo.png",
+  "/pepsi_logo.png",
+  "/pepsi_logo.png",
+  "/pepsi_logo.png",
+  "/pepsi_logo.png",
+  "/pepsi_logo.png",
+  "/pepsi_logo.png",
 ];
 
 const ClientsSection = () => {
