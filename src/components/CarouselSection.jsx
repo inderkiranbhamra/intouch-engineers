@@ -3,41 +3,33 @@ import Slider from "react-slick";
 import { IconButton } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import {  FaUsers, FaChartLine } from "react-icons/fa";
-import { VscLaw } from "react-icons/vsc";
-import { HiOutlineCurrencyDollar } from "react-icons/hi";
-import { FaMagnifyingGlassDollar } from "react-icons/fa6";
+import { FaCogs, FaDraftingCompass, FaLayerGroup, FaIndustry, FaTools } from "react-icons/fa";
 
 const services = [
   {
-    title: "Debt Recovery",
-    description: "Ethical and efficient solutions to recover outstanding debts.",
-    icon: <HiOutlineCurrencyDollar className="text-6xl text-green-600 mb-3" />,
-
+    title: "Sheet Metal Dies",
+    description: "Precision-engineered sheet metal dies for high-performance manufacturing.",
+    icon: <FaCogs className="text-6xl mb-3" style={{ color: "#f8bf18" }} />,
   },
   {
-    title: "Legal Assistance",
-    description: "Expert legal support for swift and compliant debt recovery.",
-    icon: <VscLaw className="text-6xl text-green-600 mb-3" />,
-
+    title: "Plastic Molding Dies",
+    description: "Custom plastic molding dies crafted to your exact specifications.",
+    icon: <FaLayerGroup className="text-6xl mb-3" style={{ color: "#f8bf18" }} />,
   },
   {
-    title: "Skip Tracing & Investigation",
-    description: "Advanced data analysis to locate defaulters efficiently.",
-    icon: <FaMagnifyingGlassDollar className="text-6xl text-green-600 mb-3" />,
-
+    title: "Jigs & Fixtures",
+    description: "Tailored jigs and fixtures for enhanced accuracy and productivity.",
+    icon: <FaDraftingCompass className="text-6xl mb-3" style={{ color: "#f8bf18" }} />,
   },
   {
-    title: "Field Collection Services",
-    description: "On-ground recovery efforts led by experienced agents.",
-    icon: <FaUsers className="text-6xl text-green-600 mb-3" />,
-
+    title: "Surface Grinding & VMC Job Work",
+    description: "Advanced surface grinding and VMC machining for flawless finishes.",
+    icon: <FaIndustry className="text-6xl mb-3" style={{ color: "#f8bf18" }} />,
   },
   {
-    title: "Portfolio Analysis & Risk Assessment",
-    description: "Data-driven insights to optimize debt recovery strategies.",
-    icon: <FaChartLine className="text-6xl text-green-600 mb-3" />,
-
+    title: "Hydraulic Press & E.D.M. Wirecut",
+    description: "Comprehensive hydraulic press work and E.D.M. wirecut solutions.",
+    icon: <FaTools className="text-6xl mb-3" style={{ color: "#f8bf18" }} />,
   },
 ];
 
@@ -45,7 +37,7 @@ const PrevArrow = ({ onClick }) => (
   <IconButton
     onClick={onClick}
     style={{
-      background: "#25A352",
+      background: "#f8bf18",
       borderRadius: "50%",
       position: "absolute",
       left: "-2rem",
@@ -53,7 +45,7 @@ const PrevArrow = ({ onClick }) => (
       zIndex: 1,
     }}
   >
-    <ArrowBackIosNewIcon style={{ color: "#fff" }} />
+    <ArrowBackIosNewIcon style={{ color: "#262626" }} />
   </IconButton>
 );
 
@@ -61,7 +53,7 @@ const NextArrow = ({ onClick }) => (
   <IconButton
     onClick={onClick}
     style={{
-      background: "#25A352",
+      background: "#f8bf18",
       borderRadius: "50%",
       position: "absolute",
       right: "-2rem",
@@ -69,7 +61,7 @@ const NextArrow = ({ onClick }) => (
       zIndex: 1,
     }}
   >
-    <ArrowForwardIosIcon style={{ color: "#fff" }} />
+    <ArrowForwardIosIcon style={{ color: "#262626" }} />
   </IconButton>
 );
 
@@ -101,18 +93,28 @@ const CarouselSection = () => {
   };
 
   return (
-    <div className="py-10 px-5" style={{ background: "#1656A0" }}>
-      <h2 className="text-center text-white text-4xl font-bold mb-8">Our Services</h2>
-      <div className="relative  px-4 sm:px-0  max-w-[1200px] mx-auto">
-      <Slider {...settings}>
+    <div className="py-10 px-5" style={{ background: "#262626" }}>
+      <h2 className="text-center text-4xl font-bold mb-8" style={{ color: "#fff" }}>
+        Our Services
+      </h2>
+      <div className="relative px-4 sm:px-0 max-w-[1200px] mx-auto">
+        <Slider {...settings}>
           {services.map((service, index) => (
             <div key={index} className="p-3">
-            <div className="bg-white rounded-lg shadow-md p-6 min-h-[250px] flex flex-col justify-center items-center text-center transition duration-300 hover:scale-105">
-              {service.icon}
-              <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600 text-md">{service.description}</p>
+              <div
+                className="rounded-xl shadow-lg p-6 min-h-[250px] flex flex-col justify-center items-center text-center transition duration-300 hover:scale-105"
+                style={{
+                  background: "#fff",
+                  border: "2px solid #f8bf18",
+                }}
+              >
+                {service.icon}
+                <h3 className="text-2xl font-semibold mb-2" style={{ color: "#262626" }}>
+                  {service.title}
+                </h3>
+                <p className="text-[#262626] text-md">{service.description}</p>
+              </div>
             </div>
-          </div>
           ))}
         </Slider>
       </div>
