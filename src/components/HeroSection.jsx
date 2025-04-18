@@ -25,7 +25,7 @@ const HeroSection = () => {
           Partner with us and experience the Intouch advantage in the world of precision engineering.  
         </h1>  
         <Link
-          to="about"
+          to="contact"
           smooth={true}
           duration={600}
           offset={-72} // Adjust this value if your header height is different
