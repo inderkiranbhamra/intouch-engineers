@@ -46,7 +46,7 @@ const HeroSection = () => {
               borderRadius: "12px",
             }}
           >
-            Start
+            Get InTouch
           </Button>
         </Link>
       </div>  
