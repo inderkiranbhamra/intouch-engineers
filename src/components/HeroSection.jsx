@@ -1,50 +1,110 @@
 import React from "react";
 import { Button } from "@mui/material";
+import { Link } from "react-scroll";
 
 const HeroSection = () => {
   return (
-    <section className="bg-white py-12">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
-        
-        {/* Content */}
-        <div className="flex-1">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-            Unlock Financial Stability with Expert <br />
-            <span className="text-green-600">Debt Recovery Solutions</span>
-          </h1>
+    <section className="relative w-full min-h-[80vh] overflow-hidden pt-[72px]">
+      {/* Background Video */}
+      <video  
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"  
+        src="/WEBSITE_DRAFTT.mp4"  
+        autoPlay  
+        muted  
+        loop  
+        playsInline  
+      />
 
-          <p className="text-gray-600 mt-6 max-w-lg">
-            At NexGenCred, we specialize in ethical, efficient, and data-driven
-            financial recovery solutions. With a team of seasoned recovery professionals and a commitment to compliance, we help banks and financial institutions reclaim outstanding debts while preserving valuable client relationships.
-          </p>
+      {/* Overlay */}  
+      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />  
 
+      {/* Content */}  
+      <div className="absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] z-20 text-center flex flex-col items-center justify-center px-4 text-white max-w-3xl w-full">  
+        <img src="/logo.png" alt="Logo" className="w-48 mb-6" />  
+        <h1 className="text-2xl md:text-4xl font-semibold mb-6">  
+          Partner with us and experience the Intouch advantage in the world of precision engineering.  
+        </h1>  
+        <Link
+          to="about"
+          smooth={true}
+          duration={600}
+          offset={-72} // Adjust this value if your header height is different
+        >
           <Button
             variant="contained"
             sx={{
-              backgroundColor: '#1656a0',
-              '&:hover': { backgroundColor: '#114683' },
-              marginTop: '1.5rem',
-              paddingX: '1.5rem',
-              paddingY: '0.75rem',
-              fontSize: '1rem',
-              textTransform: 'none',
+              backgroundColor: "#f8bf18",
+              color: "#262626",
+              "&:hover": {
+                backgroundColor: "#262626",
+                color: "#f8bf18",
+              },
+              paddingX: "2rem",
+              paddingY: "0.5rem",
+              fontSize: "1rem",
+              textTransform: "none",
+              borderRadius: "12px",
             }}
           >
-            Get Started Today
+            Get InTouch
           </Button>
-        </div>
-
-        {/* Image */}
-        <div className="flex-1">
-          <img
-            src="/debt.png"  // Replace with your image path
-            alt="Debt Recovery"
-            className="w-full h-auto"
-          />
-        </div>
-      </div>
+        </Link>
+      </div>  
     </section>
   );
 };
 
 export default HeroSection;
+
+
+// import React from "react";
+// import { Button } from "@mui/material";
+
+// const HeroSection = () => {
+//   return (
+//     <section className="relative w-full min-h-[80vh] overflow-hidden pt-[72px]">
+//       {/* Background Video */}
+//       <video  
+//         className="absolute top-0 left-0 w-full h-full object-cover z-0"  
+//         src="/WEBSITE_DRAFTT.mp4"  
+//         autoPlay  
+//         muted  
+//         loop  
+//         playsInline  
+//       />
+
+//       {/* Overlay */}  
+//       <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />  
+
+//       {/* Content */}  
+//       <div className="absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-[50%] z-20 text-center flex flex-col items-center justify-center px-4 text-white max-w-3xl w-full">  
+//         <img src="/logo.png" alt="Logo" className="w-48 mb-6" />  
+//         <h1 className="text-2xl md:text-4xl font-semibold mb-6">  
+//           Partner with us and experience the Intouch advantage in the world of precision engineering.  
+//         </h1>  
+//         <a href="tel:+919814944610">  
+//           <Button
+//             variant="contained"
+//             sx={{
+//               backgroundColor: "#f8bf18",
+//               color: "#262626",
+//               "&:hover": {
+//                 backgroundColor: "#262626",
+//                 color: "#f8bf18",
+//               },
+//               paddingX: "2rem",
+//               paddingY: "0.5rem",
+//               fontSize: "1rem",
+//               textTransform: "none",
+//               borderRadius: "12px",
+//             }}
+//           >
+//             Start
+//           </Button>
+//         </a>
+//       </div>  
+//     </section>
+//   );
+// };
+
+// export default HeroSection;
