@@ -53,7 +53,7 @@ const Navbar = () => {
               to={item.toLowerCase().replace(/ /g, "-")}
               smooth={true}
               duration={500}
-              offset={-60}
+              offset={-80}
               className="cursor-pointer hover:text-[#f8bf18]"
             >
               {item}
