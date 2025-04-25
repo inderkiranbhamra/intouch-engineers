@@ -67,7 +67,7 @@ const AboutUs = () => {
               <img
                 src={feature.img}
                 alt={feature.title}
-                className="mb-5 h-24 hover:scale-110 transition-transform duration-300 ease-in-out"
+                className="mb-5 h-40 hover:scale-110 transition-transform duration-300 ease-in-out"
                 style={{ objectFit: "contain" }}
               />
               <p className="font-medium text-lg text-center" style={{ color: "#262626" }}>
