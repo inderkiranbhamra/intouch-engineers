@@ -11,11 +11,19 @@ const features = [
   },
   {
     img: "/surface-grinding.png",
-    title: "Advanced Surface Grinding & VMC Job Work",
+    title: "Advanced Surface Grinding",
+  },
+  {
+    img: "/vmc-jobwork.png",
+    title: "VMC Job Work",
   },
   {
     img: "/hydraulic-press.png",
-    title: "Hydraulic Press & E.D.M. Wirecut Expertise",
+    title: "Hydraulic Press Expertise",
+  },
+  {
+    img: "/edm-wirecut.png",
+    title: "E.D.M. Wirecut Services",
   },
 ];
 
@@ -58,7 +66,7 @@ const AboutUs = () => {
           Why Choose <span style={{ color: "#f8bf18" }}>Intouch Engineers?</span>
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {features.map((feature, idx) => (
             <div
               key={idx}
