@@ -22,7 +22,7 @@ function App() {
       <section id="services"><CarouselSection /></section>
       <section ><HowItWorks /></section>
 {/*       <section id="clients"><TestimonialCarousel /></section> */}
-      <section id="clients"><ClientsSection /></section>
+      {/* <section id="clients"><ClientsSection /></section> */}
       <section id="contact">
       <ContactUs />
       <Footer /></section>
