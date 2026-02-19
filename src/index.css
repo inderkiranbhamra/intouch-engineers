@@ -1,29 +1,149 @@
-@import "tailwindcss";
-@import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-.arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    color: black;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    transform: translateY(-50%);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark industrial theme inspired by Intouch Engineers */
+    --background: 220 20% 8%;
+    --foreground: 45 10% 95%;
+
+    --card: 220 18% 12%;
+    --card-foreground: 45 10% 95%;
+
+    --popover: 220 18% 12%;
+    --popover-foreground: 45 10% 95%;
+
+    /* Golden amber primary - brand color */
+    --primary: 43 85% 52%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 45 10% 90%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 43 85% 52%;
+    --accent-foreground: 220 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 43 85% 52%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gold-glow: 43 90% 60%;
+    --gold-dark: 38 85% 42%;
+    --steel-light: 220 10% 30%;
+    --steel-dark: 220 15% 6%;
+    
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 85% 52%), hsl(35 90% 45%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 20% 8%), hsl(220 18% 12%));
+    --gradient-card: linear-gradient(145deg, hsl(220 18% 14%), hsl(220 18% 10%));
+    --gradient-hero-overlay: linear-gradient(180deg, hsla(220, 20%, 8%, 0.7) 0%, hsla(220, 20%, 8%, 0.9) 100%);
+    
+    /* Shadows */
+    --shadow-gold: 0 0 30px hsla(43, 85%, 52%, 0.3);
+    --shadow-card: 0 8px 32px hsla(0, 0%, 0%, 0.4);
+    --shadow-elevated: 0 25px 50px -12px hsla(0, 0%, 0%, 0.5);
+
+    --sidebar-background: 220 18% 10%;
+    --sidebar-foreground: 45 10% 90%;
+    --sidebar-primary: 43 85% 52%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 45 10% 90%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 43 85% 52%;
   }
-  
-  .arrow.prev {
-    left: -20px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
-  
-  .arrow.next {
-    right: -20px;
+
+  html {
+    scroll-behavior: smooth;
   }
-  
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md border border-border/50;
+    background: hsla(220, 18%, 12%, 0.8);
+  }
+
+  .glow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsla(43, 85%, 52%, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsla(43, 85%, 52%, 0.5);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
